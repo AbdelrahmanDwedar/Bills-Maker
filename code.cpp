@@ -3,15 +3,16 @@
 using std::endl;
 
 std::map<std::string, int> taxs; // Makes the map that we'll use.
+
 int main() {
     std::string Obj_name;
     int Times, quantity, price;
     std::cout << "How many objects you got: ";
     std::cin >> Times;
+    
     if(Times <= 1) {
         std::cout << "This amount of objects doesn't work!";
-    } 
-    else {
+    } else {
         for(int i=1; i<=Times;i++){
             std::cout << "Enter your object: ";
             std::cin >> Obj_name ;
@@ -21,6 +22,7 @@ int main() {
             std::cin >> price;
             taxs[Obj_name] = quantity * price;
         } 
+        
         int a=0;
         std::cout << endl << endl;
         for(const auto& [key, value] : taxs){
