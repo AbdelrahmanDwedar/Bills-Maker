@@ -10,24 +10,24 @@ int main() {
     std::cout << "How many objects you got: ";
     std::cin >> Times;
     
-    if(Times <= 1) {
+    if (Times <= 1) {
         std::cout << "This amount of objects doesn't work!";
     } else {
-        for(int i=1; i<=Times;i++){
+        for (int i=1; i<=Times; i++) {
             std::cout << "Enter your object: ";
             std::cin >> Obj_name ;
-            std::cout << "Enter the quantity: ";
+            std::cout << "\nEnter the quantity: ";
             std::cin >> quantity;
-            std::cout << "Its price: ";
+            std::cout << "\nIts price: ";
             std::cin >> price;
             taxs[Obj_name] = quantity * price;
         } 
         
-        int a=0;
+        int a = 0;
         std::cout << endl << endl;
-        for(const auto& [key, value] : taxs){
+        for (const auto& [key, value] : taxs) {
             std::cout << key << ": " << value << '$' << endl;
-            a+=taxs[key];
+            a += taxs[key];
         }
         std::cout << "The total price: " << a << '$'; 
     }
